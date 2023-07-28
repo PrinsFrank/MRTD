@@ -1,0 +1,16 @@
+{
+    "name": "prinsfrank/mrtd",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PrinsFrank\\MRTD\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrinsFrank\\MRTD\\Tests\\": "tests/"
+        }
+    },
+    "require": {}
+}
