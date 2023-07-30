@@ -6,6 +6,7 @@ namespace PrinsFrank\MRTD\Data\Factory;
 use PrinsFrank\MRTD\Data\MRZ3Data;
 use PrinsFrank\MRTD\DataElement\DataElementType;
 use PrinsFrank\MRTD\Definition\MRZ3Definition;
+use PrinsFrank\MRTD\Support\StringParser;
 
 class MRZ3DataFactory implements MRZDataFactory
 {
@@ -13,17 +14,7 @@ class MRZ3DataFactory implements MRZDataFactory
     {
         $itemData = [];
         foreach (MRZ3Definition::getDataElements() as $dataElement) {
-            $startAt = (($dataElement->lineNumber - 1) * MRZ3Definition::nrOfCharactersPerLine()) + $dataElement->charPosStart - 1;
-            $itemData[$dataElement->dataElementType->name] = substr(
-                $string,
-                $startAt,
-                (($dataElement->lineNumber - 1) * MRZ3Definition::nrOfCharactersPerLine()) + $dataElement->charPosEnd - $startAt,
-            );
-        }
-
-        $checkDigits = [];
-        foreach (MRZ3Definition::getCheckDigits() as $checkDigit) {
-            $checkDigits[] = $checkDigit->setValue(substr($string, (($checkDigit->lineNumber - 1) * MRZ3Definition::nrOfCharactersPerLine()) + $checkDigit->charPos - 1, 1));
+            $itemData[$dataElement->dataElementType->name] = StringParser::getChars($string, $dataElement->lineNumber, MRZ3Definition::nrOfCharactersPerLine(), $dataElement->charPosStart, $dataElement->charPosEnd);
         }
 
         return new MRZ3Data(
@@ -35,8 +26,7 @@ class MRZ3DataFactory implements MRZDataFactory
             $itemData[DataElementType::DATE_OF_BIRTH->name],
             $itemData[DataElementType::SEX->name],
             $itemData[DataElementType::DATE_OF_EXPIRY->name],
-            $itemData[DataElementType::PERSONAL_NUMBER_OR_OTHER_OPTIONAL_DATA_ELEMENTS->name],
-            $checkDigits,
+            $itemData[DataElementType::PERSONAL_NUMBER_OR_OTHER_OPTIONAL_DATA_ELEMENTS->name]
         );
     }
 }

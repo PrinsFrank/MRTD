@@ -6,8 +6,7 @@ namespace PrinsFrank\MRTD\CheckDigit;
 class CheckDigit
 {
     /** @var CheckDigitCharacterRange[] */
-    private array $characterRanges;
-    private string $value;
+    public array $characterRanges;
 
     public function __construct(
         public readonly int $lineNumber,
@@ -16,12 +15,5 @@ class CheckDigit
         CheckDigitCharacterRange... $characterRanges
     ) {
         $this->characterRanges = [$characterRange, ...$characterRanges];
-    }
-
-    public function setValue(string $value): static
-    {
-        $this->value = $value;
-
-        return $this;
     }
 }

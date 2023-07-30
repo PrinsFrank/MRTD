@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\MRTD;
+namespace PrinsFrank\MRTD\Character;
 
 enum Character: string
 {

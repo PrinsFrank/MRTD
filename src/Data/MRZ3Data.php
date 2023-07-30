@@ -18,7 +18,6 @@ class MRZ3Data implements MRZData
         public readonly string $sex,
         public readonly string $dateOfExpiry,
         public readonly string $personalNumberOrOtherOptionalDataElements,
-        public readonly array $checkDigits,
     ) {
     }
 

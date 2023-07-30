@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace PrinsFrank\MRTD\MRZ;
 
+use PrinsFrank\MRTD\Validation\ValidationCollection;
 use PrinsFrank\MRTD\Data\MRZ1Data;
 use PrinsFrank\MRTD\Data\MRZData;
 use PrinsFrank\MRTD\Definition\MRZ1Definition;
@@ -15,6 +16,7 @@ class MRZ1 implements MRZInterface
     public function __construct(
         public readonly MRZ1String $MRZ1String,
         public readonly MRZ1Data $MRZ1Data,
+        public readonly ValidationCollection $validationCollection,
     ) {
     }
 

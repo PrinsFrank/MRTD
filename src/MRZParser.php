@@ -8,6 +8,7 @@ use PrinsFrank\MRTD\Definition\MRZDefinition;
 use PrinsFrank\MRTD\Exceptions\InvalidMRZStringException;
 use PrinsFrank\MRTD\MRZ\MRZInterface;
 use PrinsFrank\MRTD\MRZ\Provider\MRZObjectProviderInterface;
+use PrinsFrank\MRTD\Validation\Validator;
 
 class MRZParser implements MRZParserInterface
 {
@@ -32,6 +33,7 @@ class MRZParser implements MRZParserInterface
                 return new $type(
                     new ($type::getStringObjectFQN())(...str_split($string, $definitionForType::nrOfCharactersPerLine())),
                     ($dataObjectFQN::getFactoryFQN())::fromString($string),
+                    Validator::validateStringWithCheckDigits($string, $definitionForType::nrOfCharactersPerLine(), $definitionForType::getCheckDigits()),
                 );
             }
         }
