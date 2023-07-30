@@ -7,12 +7,21 @@ class CheckDigit
 {
     /** @var CheckDigitCharacterRange[] */
     private array $characterRanges;
+    private string $value;
 
     public function __construct(
+        public readonly int $lineNumber,
         public readonly int      $charPos,
         CheckDigitCharacterRange $characterRange,
         CheckDigitCharacterRange... $characterRanges
     ) {
         $this->characterRanges = [$characterRange, ...$characterRanges];
+    }
+
+    public function setValue(string $value): static
+    {
+        $this->value = $value;
+
+        return $this;
     }
 }

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\MRTD\CheckDigit;
+namespace PrinsFrank\MRTD\DataElement;
 
 enum DataElementType
 {

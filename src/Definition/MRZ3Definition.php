@@ -1,30 +1,30 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\MRTD\MRZ;
+namespace PrinsFrank\MRTD\Definition;
 
 use PrinsFrank\MRTD\CheckDigit\CheckDigitCharacterRange;
 use PrinsFrank\MRTD\CheckDigit\CheckDigit;
-use PrinsFrank\MRTD\CheckDigit\DataElementType;
+use PrinsFrank\MRTD\DataElement\DataElementType;
 use PrinsFrank\MRTD\DataElement\DataElement;
 
 class MRZ3Definition implements MRZDefinition
 {
-    public function nrOfLines(): int
+    public static function nrOfLines(): int
     {
         return 2;
     }
 
-    public function nrOfCharactersPerLine(): int
+    public static function nrOfCharactersPerLine(): int
     {
         return 44;
     }
 
     /** @return array<DataElement> */
-    public function getDataElements(): array
+    public static function getDataElements(): array
     {
         return [
-            new DataElement(DataElementType::DOCUMENT_CODE, 1, 1, 2),
+            new DataElement(DataElementType::DOCUMENT_CODE, 1, 1, 1),
             new DataElement(DataElementType::ISSUING_STATE_OR_ORGANIZATION, 1, 3, 5),
             new DataElement(DataElementType::NAME, 1, 6, 44),
             new DataElement(DataElementType::PASSPORT_NUMBER, 2, 1, 9),
@@ -37,14 +37,14 @@ class MRZ3Definition implements MRZDefinition
     }
 
     /** @return array<CheckDigit> */
-    public function getCheckDigits(): array
+    public static function getCheckDigits(): array
     {
         return [
-            new CheckDigit(10, new CheckDigitCharacterRange(2, 1, 9)),
-            new CheckDigit(20, new CheckDigitCharacterRange(2, 14, 19)),
-            new CheckDigit(28, new CheckDigitCharacterRange(2, 22, 27)),
-            new CheckDigit(43, new CheckDigitCharacterRange(2, 29, 42)),
-            new CheckDigit(44, new CheckDigitCharacterRange(2, 1, 10), new CheckDigitCharacterRange(2, 14, 20), new CheckDigitCharacterRange(2, 22, 43)),
+            new CheckDigit(2, 10, new CheckDigitCharacterRange(2, 1, 9)),
+            new CheckDigit(2, 20, new CheckDigitCharacterRange(2, 14, 19)),
+            new CheckDigit(2, 28, new CheckDigitCharacterRange(2, 22, 27)),
+            new CheckDigit(2, 43, new CheckDigitCharacterRange(2, 29, 42)),
+            new CheckDigit(2, 44, new CheckDigitCharacterRange(2, 1, 10), new CheckDigitCharacterRange(2, 14, 20), new CheckDigitCharacterRange(2, 22, 43)),
         ];
     }
 }

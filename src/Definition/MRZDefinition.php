@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\MRTD\MRZ;
+namespace PrinsFrank\MRTD\Definition;
 
 use PrinsFrank\MRTD\CheckDigit\CheckDigit;
 use PrinsFrank\MRTD\DataElement\DataElement;
 
 interface MRZDefinition
 {
-    public function nrOfLines(): int;
+    public static function nrOfLines(): int;
 
-    public function nrOfCharactersPerLine(): int;
+    public static function nrOfCharactersPerLine(): int;
 
     /** @return array<DataElement> */
-    public function getDataElements(): array;
+    public static function getDataElements(): array;
 
     /** @return array<CheckDigit> */
-    public function getCheckDigits(): array;
+    public static function getCheckDigits(): array;
 }

@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace PrinsFrank\MRTD\DataElement;
 
-use PrinsFrank\MRTD\CheckDigit\DataElementType;
-
 class DataElement
 {
     public function __construct(
