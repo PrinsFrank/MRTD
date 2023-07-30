@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace PrinsFrank\MRTD\MRZ;
 
-use PrinsFrank\MRTD\CheckDigit\CharacterRange;
+use PrinsFrank\MRTD\CheckDigit\CheckDigitCharacterRange;
 use PrinsFrank\MRTD\CheckDigit\CheckDigit;
 use PrinsFrank\MRTD\CheckDigit\DataElementType;
 use PrinsFrank\MRTD\DataElement\DataElement;
 
-class MRZ3 implements MRZ
+class MRZ3Definition implements MRZDefinition
 {
     public function nrOfLines(): int
     {
@@ -40,11 +40,11 @@ class MRZ3 implements MRZ
     public function getCheckDigits(): array
     {
         return [
-            new CheckDigit(10, new CharacterRange(2, 1, 9)),
-            new CheckDigit(20, new CharacterRange(2, 14, 19)),
-            new CheckDigit(28, new CharacterRange(2, 22, 27)),
-            new CheckDigit(43, new CharacterRange(2, 29, 42)),
-            new CheckDigit(44, new CharacterRange(2, 1, 10), new CharacterRange(2, 14, 20), new CharacterRange(2, 22, 43)),
+            new CheckDigit(10, new CheckDigitCharacterRange(2, 1, 9)),
+            new CheckDigit(20, new CheckDigitCharacterRange(2, 14, 19)),
+            new CheckDigit(28, new CheckDigitCharacterRange(2, 22, 27)),
+            new CheckDigit(43, new CheckDigitCharacterRange(2, 29, 42)),
+            new CheckDigit(44, new CheckDigitCharacterRange(2, 1, 10), new CheckDigitCharacterRange(2, 14, 20), new CheckDigitCharacterRange(2, 22, 43)),
         ];
     }
 }

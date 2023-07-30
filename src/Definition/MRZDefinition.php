@@ -6,7 +6,7 @@ namespace PrinsFrank\MRTD\MRZ;
 use PrinsFrank\MRTD\CheckDigit\CheckDigit;
 use PrinsFrank\MRTD\DataElement\DataElement;
 
-interface MRZ
+interface MRZDefinition
 {
     public function nrOfLines(): int;
 

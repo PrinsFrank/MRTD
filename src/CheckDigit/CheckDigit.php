@@ -5,13 +5,13 @@ namespace PrinsFrank\MRTD\CheckDigit;
 
 class CheckDigit
 {
-    /** @var CharacterRange[] */
+    /** @var CheckDigitCharacterRange[] */
     private array $characterRanges;
 
     public function __construct(
-        public readonly int $charPos,
-        CharacterRange $characterRange,
-        CharacterRange... $characterRanges
+        public readonly int      $charPos,
+        CheckDigitCharacterRange $characterRange,
+        CheckDigitCharacterRange... $characterRanges
     ) {
         $this->characterRanges = [$characterRange, ...$characterRanges];
     }

@@ -3,12 +3,10 @@ declare(strict_types=1);
 
 namespace PrinsFrank\MRTD\MRZ;
 
-use PrinsFrank\MRTD\CheckDigit\CharacterRange;
 use PrinsFrank\MRTD\CheckDigit\CheckDigit;
-use PrinsFrank\MRTD\CheckDigit\DataElementType;
 use PrinsFrank\MRTD\DataElement\DataElement;
 
-class MRZ1 implements MRZ
+class MRZ1Definition implements MRZDefinition
 {
     public function nrOfLines(): int
     {

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace PrinsFrank\MRTD\CheckDigit;
 
-class CharacterRange
+class CheckDigitCharacterRange
 {
     public function __construct(
         public readonly int $line,
