@@ -1,6 +1,7 @@
 {
     "name": "prinsfrank/mrtd",
     "type": "library",
+    "description": "Machine-Readable Travel Document parser",
     "license": "MIT",
     "autoload": {
         "psr-4": {
