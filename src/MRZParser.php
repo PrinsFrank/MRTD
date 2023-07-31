@@ -25,10 +25,8 @@ class MRZParser implements MRZParserInterface
         $string = str_replace(["\n", "\r", ''], '', $string);
         $strlen = strlen($string);
         foreach ($this->MRZObjectProvider->getMRZTypes() as $type) {
-            /** @var MRZDefinition $definitionForType */
             $definitionForType = $type::getDefinitionFQN();
-            /** @var class-string<MRZData> $dataObjectFQN */
-            $dataObjectFQN = $type::getDataObjectFQN();
+            $dataObjectFQN     = $type::getDataObjectFQN();
             if ($definitionForType::nrOfCharactersPerLine() * $definitionForType::nrOfLines() === $strlen) {
                 return new $type(
                     new ($type::getStringObjectFQN())(...str_split($string, $definitionForType::nrOfCharactersPerLine())),

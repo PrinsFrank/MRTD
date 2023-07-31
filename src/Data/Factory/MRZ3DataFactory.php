@@ -8,6 +8,9 @@ use PrinsFrank\MRTD\DataElement\DataElementType;
 use PrinsFrank\MRTD\Definition\MRZ3Definition;
 use PrinsFrank\MRTD\Support\StringParser;
 
+/**
+ * @implements MRZDataFactory<MRZ3Data>
+ */
 class MRZ3DataFactory implements MRZDataFactory
 {
     public static function fromString(string $string): MRZ3Data

@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace PrinsFrank\MRTD\Data;
 
 use PrinsFrank\MRTD\Data\Factory\MRZ1DataFactory;
-use PrinsFrank\MRTD\Data\Factory\MRZDataFactory;
 
 class MRZ1Data implements MRZData
 {
@@ -22,7 +21,7 @@ class MRZ1Data implements MRZData
     ) {
     }
 
-    /** @return class-string<MRZDataFactory> */
+    /** @return class-string<MRZ1DataFactory> */
     public static function getFactoryFQN(): string
     {
         return MRZ1DataFactory::class;

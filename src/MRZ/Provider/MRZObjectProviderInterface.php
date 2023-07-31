@@ -7,6 +7,6 @@ use PrinsFrank\MRTD\MRZ\MRZInterface;
 
 interface MRZObjectProviderInterface
 {
-    /** @return array<MRZInterface> */
+    /** @return list<class-string<MRZInterface>> */
     public function getMRZTypes(): array;
 }

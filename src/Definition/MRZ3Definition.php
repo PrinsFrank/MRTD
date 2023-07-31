@@ -10,11 +10,13 @@ use PrinsFrank\MRTD\DataElement\DataElement;
 
 class MRZ3Definition implements MRZDefinition
 {
+    /** @return int<1, max> */
     public static function nrOfLines(): int
     {
         return 2;
     }
 
+    /** @return int<1, max> */
     public static function nrOfCharactersPerLine(): int
     {
         return 44;

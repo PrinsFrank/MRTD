@@ -20,19 +20,19 @@ class MRZ3 implements MRZInterface
     ) {
     }
 
-    /** @return class-string<MRZDefinition> */
+    /** @return class-string<MRZ3Definition> */
     public static function getDefinitionFQN(): string
     {
         return MRZ3Definition::class;
     }
 
-    /** @return class-string<MRZString> */
+    /** @return class-string<MRZ3String> */
     public static function getStringObjectFQN(): string
     {
         return MRZ3String::class;
     }
 
-    /** @return class-string<MRZData> */
+    /** @return class-string<MRZ3Data> */
     public static function getDataObjectFQN(): string
     {
         return MRZ3Data::class;

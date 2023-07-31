@@ -8,8 +8,10 @@ use PrinsFrank\MRTD\DataElement\DataElement;
 
 interface MRZDefinition
 {
+    /** @return int<1, max> */
     public static function nrOfLines(): int;
 
+    /** @return int<1, max> */
     public static function nrOfCharactersPerLine(): int;
 
     /** @return array<DataElement> */

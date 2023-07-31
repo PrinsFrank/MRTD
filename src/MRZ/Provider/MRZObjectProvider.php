@@ -10,7 +10,7 @@ use PrinsFrank\MRTD\MRZ\MRZInterface;
 
 class MRZObjectProvider implements MRZObjectProviderInterface
 {
-    /** @return array<MRZInterface> */
+    /** @return list<class-string<MRZInterface>> */
     public function getMRZTypes(): array
     {
         return [

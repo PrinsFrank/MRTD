@@ -7,6 +7,6 @@ use PrinsFrank\MRTD\Data\Factory\MRZDataFactory;
 
 interface MRZData
 {
-    /** @return class-string<MRZDataFactory> */
+    /** @return class-string<MRZDataFactory<MRZData>> */
     public static function getFactoryFQN(): string;
 }
