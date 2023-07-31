@@ -8,21 +8,7 @@ This Package currently implements retrieving data from MRZ strings and checking 
 
 ## MRTD1
 
-<style>
-    table {
-        font-family: Monospace,serif;
-    }
-
-    table tr,
-    table td {
-        border: 0;
-        margin: 0;
-        padding: 0;
-        letter-spacing: 10px;
-        word-spacing: 0;
-    }
-</style>
-<table>
+<table style="font-family: Monospace,serif; letter-spacing: 5px;">
     <tr>
         <td colspan="2">I&lt;</td>
         <td colspan="3">UTO</td>
