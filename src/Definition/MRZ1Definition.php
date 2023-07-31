@@ -32,7 +32,7 @@ class MRZ1Definition implements MRZDefinition
             new DataElement(DataElementType::SEX, 2, 8, 8),
             new DataElement(DataElementType::DATE_OF_EXPIRY, 2, 9, 14),
             new DataElement(DataElementType::NATIONALITY, 2, 16, 18),
-            new DataElement(DataElementType::OPTIONAL_DATA_ELEMENTS, 2, 19, 29),
+            new DataElement(DataElementType::OPTIONAL_DATA_ELEMENTS_SECONDARY, 2, 19, 29),
             new DataElement(DataElementType::NAME, 3, 1, 30),
         ];
     }
