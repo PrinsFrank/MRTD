@@ -4,7 +4,7 @@ Machine Readable Travel Documents are everywhere. They are standardized by ICAO 
 
 MRTDs are standardized in Doc series 9303.
 
-This Package currently implements retrieving data from MRZ strings and checking data integrity by calculating check digits.
+This Package currently implements retrieving data from MRZ strings and checking data integrity by calculating check digits. It doesn't implement generating MRZ strings from data or checking data correctness from source data to encoded data. Feel free to contribute!
 
 ## MRTD1
 
