@@ -1,3 +1,8 @@
+<picture>
+  <source srcset="docs/images/banner_dark.png" media="(prefers-color-scheme: dark)">
+  <img src="docs/images/banner_light.png" alt="Banner">
+</picture>
+
 # MRTD - Machine Readable Travel Documents
 
 ![GitHub](https://img.shields.io/github/license/prinsfrank/MRTD)
