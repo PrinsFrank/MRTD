@@ -1,10 +1,26 @@
 # MRTD - Machine Readable Travel Documents
 
+![GitHub](https://img.shields.io/github/license/prinsfrank/MRTD)
+![PHP Version Support](https://img.shields.io/packagist/php-v/prinsfrank/MRTD)
+
 Machine Readable Travel Documents are everywhere. They are standardized by ICAO - the International Civil Aviation Organization, a United Nations specialized agency.
 
 MRTDs are standardized in Doc series 9303.
 
 This Package currently implements retrieving data from MRZ strings and checking data integrity by calculating check digits. It doesn't implement generating MRZ strings from data or checking data correctness from source data to encoded data. Feel free to contribute!
+
+## Setup
+
+> **Note**
+> Make sure you are running PHP 8.1 or higher to use this package
+
+To start right away, run the following command in your composer project;
+
+```composer require prinsfrank/mrtd```
+
+Or for development only;
+
+```composer require prinsfrank/mrtd --dev```
 
 ## MRTD1
 
