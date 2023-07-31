@@ -24,7 +24,7 @@ class MRZ3Definition implements MRZDefinition
     public static function getDataElements(): array
     {
         return [
-            new DataElement(DataElementType::DOCUMENT_CODE, 1, 1, 1),
+            new DataElement(DataElementType::DOCUMENT_CODE, 1, 1, 2),
             new DataElement(DataElementType::ISSUING_STATE_OR_ORGANIZATION, 1, 3, 5),
             new DataElement(DataElementType::NAME, 1, 6, 44),
             new DataElement(DataElementType::PASSPORT_NUMBER, 2, 1, 9),

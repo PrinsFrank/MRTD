@@ -41,7 +41,6 @@ class MRZ1Definition implements MRZDefinition
     public static function getCheckDigits(): array
     {
         return [
-//            new CheckDigit(1, 15, new CheckDigitCharacterRange(1, 6, 14)),
             new CheckDigit(2, 7, new CheckDigitCharacterRange(2, 1, 6)),
             new CheckDigit(2, 15, new CheckDigitCharacterRange(2, 9, 14)),
             new CheckDigit(2, 30, new CheckDigitCharacterRange(1, 6, 30), new CheckDigitCharacterRange(2, 1, 7), new CheckDigitCharacterRange(2, 9, 15), new CheckDigitCharacterRange(2, 19, 29)),
