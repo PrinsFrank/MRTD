@@ -8,9 +8,11 @@ This Package currently implements retrieving data from MRZ strings and checking 
 
 ## MRTD1
 
+Format as specified in [Doc 9303 Part 5](https://www.icao.int/publications/Documents/9303_p5_cons_en.pdf), Appendix B
+
 <table style="font-family: Monospace,serif; letter-spacing: 5px;">
     <tr>
-        <td colspan="2">I&lt;</td>
+        <td colspan="2" title="Identifier">I&lt;</td>
         <td colspan="3">UTO</td>
         <td colspan="9">D23145890</td>
         <td colspan="1">7</td>
