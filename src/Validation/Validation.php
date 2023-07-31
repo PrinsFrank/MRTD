@@ -10,7 +10,6 @@ class Validation
     public function __construct(
         public readonly CheckDigit $checkDigit,
         public readonly bool       $valid,
-    )
-    {
+    ) {
     }
 }

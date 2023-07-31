@@ -28,7 +28,7 @@ class MRZ1Definition implements MRZDefinition
             new DataElement(DataElementType::ISSUING_STATE_OR_ORGANIZATION, 1, 3, 5),
             new DataElement(DataElementType::DOCUMENT_NUMBER, 1, 6, 14),
             new DataElement(DataElementType::OPTIONAL_DATA_ELEMENTS, 1, 16, 30),
-            new DataElement(DataElementType::DATE_OF_BIRTH, 2, 1,6),
+            new DataElement(DataElementType::DATE_OF_BIRTH, 2, 1, 6),
             new DataElement(DataElementType::SEX, 2, 8, 8),
             new DataElement(DataElementType::DATE_OF_EXPIRY, 2, 9, 14),
             new DataElement(DataElementType::NATIONALITY, 2, 16, 18),

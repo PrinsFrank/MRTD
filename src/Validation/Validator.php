@@ -17,7 +17,7 @@ class Validator
         $validations = [];
         foreach ($checkDigits as $checkDigit) {
             $checkDigitValue = (int) StringParser::getChars($string, $checkDigit->lineNumber, $nrOfCharsPerLine, $checkDigit->charPos, $checkDigit->charPos);
-            $charsInRange = '';
+            $charsInRange    = '';
             foreach ($checkDigit->characterRanges as $characterRange) {
                 $charsInRange .= StringParser::getChars($string, $characterRange->line, $nrOfCharsPerLine, $characterRange->startChar, $characterRange->endChar);
             }
