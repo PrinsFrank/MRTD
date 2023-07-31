@@ -9,7 +9,7 @@ use PrinsFrank\MRTD\Definition\MRZ1Definition;
 use PrinsFrank\MRTD\Support\StringParser;
 
 /**
- * @implements \PrinsFrank\MRTD\Data\MRZData<\PrinsFrank\MRTD\Data\MRZ1Data>
+ * @implements \PrinsFrank\MRTD\Data\Factory\MRZDataFactory<\PrinsFrank\MRTD\Data\MRZ1Data>
  */
 class MRZ1DataFactory implements MRZDataFactory
 {
