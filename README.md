@@ -8,27 +8,27 @@ This Package currently implements retrieving data from MRZ strings and checking 
 
 ## MRTD1
 
-Format as specified in [Doc 9303 Part 5](https://www.icao.int/publications/Documents/9303_p5_cons_en.pdf), Appendix B
+Format as specified in [Doc 9303 Part 5](https://www.icao.int/publications/Documents/9303_p5_cons_en.pdf), Appendix B. (Hover for short descriptions)
 
 <table style="font-family: Monospace,serif; letter-spacing: 5px;">
     <tr>
         <td colspan="2" title="Identifier">I&lt;</td>
-        <td colspan="3">UTO</td>
-        <td colspan="9">D23145890</td>
-        <td colspan="1">7</td>
-        <td colspan="15">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
+        <td colspan="3" title="Issuing State">UTO</td>
+        <td colspan="9" title="Document Number">D23145890</td>
+        <td colspan="1" title="Check Digit on Document Number">7</td>
+        <td colspan="15" title="Optional Data">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
     </tr>
     <tr>
-        <td colspan="6">740812</td>
-        <td colspan="1">2</td>
-        <td colspan="1">F</td>
-        <td colspan="6">120415</td>
-        <td colspan="1">9</td>
-        <td colspan="3">UTO</td>
-        <td colspan="11">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
-        <td colspan="1">6</td>
+        <td colspan="6" title="Date of Birth in YYMMDD">740812</td>
+        <td colspan="1" title="Check digit on Date of Birth">2</td>
+        <td colspan="1" title="Sex">F</td>
+        <td colspan="6" title="Expiry date in YYMMDD">120415</td>
+        <td colspan="1" title="Check digit on Expiry Date">9</td>
+        <td colspan="3" title="Nationality">UTO</td>
+        <td colspan="11" title="Optional Data">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
+        <td colspan="1" title="Overall Check Digit">6</td>
     </tr>
     <tr>
-        <td colspan="30">ERIKSSON&lt;&lt;ANNA&lt;MARIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
+        <td colspan="30" title="Name">ERIKSSON&lt;&lt;ANNA&lt;MARIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
     </tr>
 </table>
