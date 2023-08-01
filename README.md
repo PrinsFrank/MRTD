@@ -7,6 +7,7 @@
 
 ![GitHub](https://img.shields.io/github/license/prinsfrank/MRTD)
 ![PHP Version Support](https://img.shields.io/packagist/php-v/prinsfrank/MRTD)
+[![Coverage](https://coveralls.io/repos/github/PrinsFrank/MRTD/badge.svg)](https://coveralls.io/github/PrinsFrank/MRTD)
 
 Machine Readable Travel Documents are everywhere. They are standardized by ICAO - the International Civil Aviation Organization, a United Nations specialized agency.
 
