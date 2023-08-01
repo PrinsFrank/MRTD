@@ -1,16 +1,15 @@
-# Composer
+# IDE and local environment
+/.idea/
+
+# Dependencies
+/composer.lock
 /vendor/
-composer.lock
 
-# CSFixer
+# Library
+
+# Tests
+/build/
 .php-cs-fixer.cache
-
-# PHPUnit
 .phpunit.result.cache
-coverage.xml
 
-# JetBrains
-.idea
-
-#Gecko driver required for spec update
-/drivers
+# Distribution
