@@ -108,7 +108,7 @@ jobs:
             run: |
                 wget --no-verbose \
                     "https://github.com/php-coveralls/php-coveralls/releases/download/v2.5.3/php-coveralls.phar"
-                #php ./php-coveralls.phar --verbose
+                php ./php-coveralls.phar --verbose
 
     static_analysis:
         name: "3️⃣ Static Analysis"
